@@ -68,13 +68,24 @@ if ('hacker1'.localeCompare('hacker2') === 1) {
       console.log(wordCount(longText));
 
 
-      let count = 0;
-      for (let i=0; i<longText.length; i++) {
-        const theWord = longText[i] + longText[i+1];
-
-        if (theWord === "et") {
-            count++;
-        }
-      }
-
+      let count = longText.split(' et ').length-1;
+    
       console.log(count);
+
+      // bonus 2
+
+        let string = "noon";
+        const len = string.length;
+    
+        for (let i = 0; i < len / 2; i++) {
+    
+            if (string[i] !== string[len - 1 - i]) {
+                console.log('It is not a palindrome');
+            }
+            else {
+                console.log('It is a palindrome');
+            }
+            break;
+        }
+        
+
